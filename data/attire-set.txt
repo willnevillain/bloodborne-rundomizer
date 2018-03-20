@@ -1,0 +1,2 @@
+# name, armor type, armor set, plus, chalice
+Ashen Hunter, Black Church, Cainhurst, Charred Hunter, Choir, Crowfeather, Executioner, Foreign, Gascoigne's, Graveguard, Hunter A, Hunter B, Knight's Set, Student A, Student B, Tomb Prospector, White Church, Yharnam Hunter, Yahar'gul, Doll, Madman, Henryk's Hunter,

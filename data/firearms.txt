@@ -1,0 +1,17 @@
+#name, str_req, skl_req, blt_req, arc_req, ng+, chalice
+Cannon, 30, 13, 0, 0, False, False
+Church Cannon, 27, 0, 16, 0, False, False
+Evelyn, 9, 11, 18, 0, False, False
+Fist of Gratia, 7, 9, 5, 0, False, False
+Flamesprayer, 0, 8, 0, 8, False, False
+Gatling Gun, 28, 12, 0, 0, False, False
+Hunter Blunderbuss, 7, 9, 5, 0, False, False
+Hunter Pistol, 7, 9, 5, 0, False, False
+Hunter's Torch, 6, 0, 0, 0, False, False
+Loch Shield, 11, 8, 0, 0, False, False
+Ludwig's Rifle, 9, 10, 9, 0, False, False
+Piercing Rifle, 9, 10, 9, 0, False, False
+Repeating Pistol, 10, 11, 8, 0, False, False
+Rosmarinus, 0, 8, 0, 8, False, False
+Torch, 6, 0, 0, 0, False, False
+Wooden Shield, 8, 8, 0, 0, False, False
