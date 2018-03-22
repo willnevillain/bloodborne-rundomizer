@@ -11,35 +11,46 @@ def getopts(argv):
         argv = argv[1:]
     return opts
 
-def chooseItem(db_table, args):
+def choose_item(db_table, args):
     items = db_table.all()
-    rand = random.randint(0, len(items) - 1)
     item = None
     chosen = False
+    items_seen = []
     while not chosen:
+        rand = random.randint(0, len(items) - 1)
         item = items[rand]
-        if item['plus'] == 'True' and 'plus' not in args:
-            continue
-        if item['chalice'] == 'True' and 'chalice' not in args:
-            continue
-        if 'fashion' in item and item['fashion'] == 'True' and 'fashion' not in args:
-            continue
+        items_seen.append(item['name'])
+        if len(items_seen) >= len(items):
+            return {
+                'message': 'Saw all items and found none suitable! Verify data files and parameters!'
+            }
+        if 'all' not in args:
+            if item['plus'] == 'True' and 'plus' not in args:
+                continue
+            if item['chalice'] == 'True' and 'chalice' not in args:
+                continue
+            if 'fashion' in item and item['fashion'] == 'True' and 'fashion' not in args:
+                continue
         chosen = True
     return items[rand]
 
 def main():
     args = getopts(argv)
-    print(args)
 
     db = TinyDB('data/db.json')
-    weapon = chooseItem(db.table('trick_weapons'), args)
-    firearm = chooseItem(db.table('firearms'), args)
-    head = chooseItem(db.table('head_attire'), args)
+    chosen_items = []
+    for table_name in db.tables():
+        if table_name == '_default':
+            continue
+        table = db.table(table_name)
+        chosen_items.append(choose_item(table, args))
     
+    chosen_items_organized = {}
+    for item in chosen_items:
+        chosen_items_organized[item['subtype']] =  item['name']
 
-    print(weapon)
-    print(firearm)
-    print(head)
+    print(chosen_items_organized)
+    
 
 if __name__ == '__main__':
     main()
