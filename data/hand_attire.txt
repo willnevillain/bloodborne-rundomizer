@@ -1,4 +1,5 @@
 armor
+hand
 #name, set, ng_plus_required, chalices_required, fashion_only
 Ashen Hunter Gloves, Ashen Hunter, False, False, False
 Bloodied Arm Bands, Brador, False, False, False

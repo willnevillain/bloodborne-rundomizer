@@ -1,4 +1,5 @@
 weapon
+trick
 #name, str_req, skl_req, blt_req, arc_req, ng+, chalice;
 Amygdalan Arm, 17, 9, 0, 0, False, False
 Beast Claw, 14, 12, 0, 0, False, True

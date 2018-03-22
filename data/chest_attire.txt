@@ -1,4 +1,5 @@
 armor
+chest
 #name, set, ng_plus_required, chalices_required, fashion_only
 Ashen Hunter Garb, Ashen Hunter, False, False, False
 Beast Hide Garb, Brador, False, False, False
