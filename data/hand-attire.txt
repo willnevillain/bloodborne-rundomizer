@@ -1,0 +1,29 @@
+#name, set, plus, chalice, fashion
+Ashen Hunter Gloves, Ashen Hunter, False, False, False
+Bloodied Arm Bands, Brador, False, False, False
+Bone Ash Gauntlets, Bone Ash, False, True, False
+Butcher Gloves, Butcher, False, False, False
+Cainhurst Gauntlets, Cainhurst, False, False, False
+Charred Hunter Gloves, Charred, False, False, False
+Choir Gloves, Choir, False, False, False
+Crowfeather Manchettes, Crowfeather, False, False, False
+Doll Gloves, Doll, False, False, True
+Executioner Gauntlets, Executioner, False, False, False
+Gascoigne's Gloves, Gascoigne, False, False, False
+Graveguard Manchettes, Graveguard, False, False, False
+Harrowed Gloves, Harrowed, False, False, False
+Henryk's Hunter Gloves, Henryk, False, False, False
+Hunter Gloves, Hunter A, False, False, False
+Hunter Gloves, Hunter B, False, False, False
+Knight's Gloves, Knight, False, False, False
+Madman Manchettes, Madman, False, True, False
+Maria Hunter Gloves, Maria, False, False, False
+Old Hunter Arm Bands, Yamamura, False, False, False
+Old Hunter Gloves, Old Hunter, False, False, False
+Old Hunter Gloves, Decorative Old Hunter, False, False, False
+Sullied Bandage, Foreign, False, False, False
+Surgical Long Gloves, Black Church, False, False, False
+Surgical Long Gloves, White Church, False, False, False
+Tomb Prospector Gloves, Tomb Prospector, False, False, False
+Yahar'gul Black Gloves, Yahar'gul, False, False, False
+Yharnam Hunter Gloves, Yharnam Hunter, False, False, False
