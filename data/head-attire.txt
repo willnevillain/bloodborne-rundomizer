@@ -12,20 +12,22 @@ Crown of Illusions, NO_SET, False, False, True
 Doll Hat, Doll, False, False, True
 Enlarged Head, NO_SET, False, False, True
 Gascoigne's Cap, Gascoigne, False, False, False
+Gehrman's Hunter Cap, Gehrman, True, False, False
 Gold Ardeo, Executioner, False, False, False
 Graveguard Mask, Graveguard, False, False, False
 Grey Wolf Cap, Ashen Hunter, False, False, False
 Harrowed Hood, Harrowed, False, False, False
 Henryk's Hunter Cap, Henryk, False, False, False
 Hunter Hat, Hunter A, False, False, False
-Iron Yahar'Gul Helm, NO_SET, False, False, True
+Iron Yahar'Gul Helm, Yahar'gul, False, False, True
 Knight's Wig, Knight, False, False, False
 Madman Hood, Madman, False, True, False
 Maria Hunter Cap, Maria, False, False, False
 Master's Iron Helm, Constable, False, False, False
 Mensis Cage, NO_SET, False, False, True
 Old Hunter Cap, Old Hunter, False, False, False
-One-Eyed Iron Helm, NO_SET, False, False, True
+Old Hunter Top Hat, Decorative Old Hunter, False, False, False
+One-Eyed Iron Helm, Constable, False, False, True
 Rumpled Yharnam Hat, NO_SET, False, False, True
 Tomb Prospector Hood, Tomb Prospector, False, False, False
 Top Hat, Hunter B, False, False, False
