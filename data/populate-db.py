@@ -41,6 +41,7 @@ def main():
     populateArmor(db, 'head-attire.txt', 'head_attire')
     populateArmor(db, 'chest-attire.txt', 'chest_attire')
     populateArmor(db, 'hand-attire.txt', 'hand_attire')
+    populateArmor(db, 'leg-attire.txt', 'leg_attire')
 
 if __name__ == '__main__':
     main()
