@@ -39,6 +39,7 @@ def main():
     populateWeapons(db, 'trick-weapons.txt', 'trick_weapons')
     populateWeapons(db, 'firearms.txt', 'firearms')
     populateArmor(db, 'head-attire.txt', 'head_attire')
+    populateArmor(db, 'chest-attire.txt', 'chest_attire')
 
 if __name__ == '__main__':
     main()
