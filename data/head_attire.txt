@@ -1,4 +1,5 @@
-#name, set, ng+, chalice, fashion
+armor
+#name, set, ng_plus_required, chalices_required, fashion_only
 Beak Mask, Crowfeather, False, False, False
 Black Church Hat, Black Church, False, False, False
 Black Hood, Foreign, False, False, False

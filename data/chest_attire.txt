@@ -1,4 +1,5 @@
-#name, set, plus, chalice, fashion
+armor
+#name, set, ng_plus_required, chalices_required, fashion_only
 Ashen Hunter Garb, Ashen Hunter, False, False, False
 Beast Hide Garb, Brador, False, False, False
 Black Church Garb, Black Church, False, False, False
