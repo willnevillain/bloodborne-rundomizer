@@ -14,7 +14,7 @@ Doll Clothes, Doll, False, False, True
 Executioner Garb, Executioner, False, False, False
 Foreign Garb, Foreign, False, False, False
 Gascoigne's Garb, Gascoigne, False, False, False
-Gehrman's Hunter Garb, Gherman, True, False, False
+Gehrman's Hunter Garb, Gehrman, True, False, False
 Graveguard Robe, Graveguard, False, False, False
 Harrowed Garb, Harrowed, False, False, False
 Henryk's Hunter Garb, Henryk, False, False, False
