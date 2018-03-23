@@ -1,5 +1,6 @@
 from tinydb import TinyDB
 from sys import argv
+from hunter import Hunter
 
 import random
 
@@ -10,6 +11,16 @@ def getopts(argv):
             opts.append(argv[0][1:])
         argv = argv[1:]
     return opts
+
+def list_options():
+    return {
+        'plus': 'Allows items found only in NG+ to be chosen.',
+        'chalice': 'Allows items found only in chalice dungeons to be chosen.',
+        'fashion': 'Armor will include items with no set, and less functional armor.',
+        'all': 'Alias to enable plus, chalice and fashion options.',
+        'set': 'All armor chosen will be from same set.', #to be implemented
+        'dual': 'Two trick weapons and two firearms will be chosen.' #to be implemented
+    }
 
 def choose_item(db_table, args):
     items = db_table.all()
@@ -38,19 +49,33 @@ def choose_item(db_table, args):
 def main():
     args = getopts(argv)
 
+    if 'help' in args:
+        print(list_options)
+        return
+
     db = TinyDB('data/db.json')
-    chosen_items = []
+    chosen_items = {}
     for table_name in db.tables():
         if table_name == '_default':
             continue
         table = db.table(table_name)
-        chosen_items.append(choose_item(table, args))
+        if 'dual' in args and table_name in ['trick_weapons', 'firearms']:
+            weapon = choose_item(table, args)
+            chosen_items[weapon['subtype']] = [weapon]
+            #fixme - same weapon can be chosen twice
+            weapon = choose_item(table, args)
+            chosen_items[weapon['subtype']].append(weapon)
+        else:
+            item = choose_item(table, args)
+            chosen_items[item['subtype']] = item
     
-    chosen_items_organized = {}
-    for item in chosen_items:
-        chosen_items_organized[item['subtype']] =  item['name']
-
-    print(chosen_items_organized)
+    hunter = Hunter('Build', chosen_items)
+    hunter.add_items(chosen_items)
+    hunter.calculate_stats()
+    print(hunter.items)
+    print(hunter.req_stats)
+    hunter.display_info()
+    
     
 
 if __name__ == '__main__':
