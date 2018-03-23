@@ -13,14 +13,16 @@ def getopts(argv):
     return opts
 
 def list_options():
-    return {
+    options = {
         'plus': 'Allows items found only in NG+ to be chosen.',
         'chalice': 'Allows items found only in chalice dungeons to be chosen.',
         'fashion': 'Armor will include items with no set, and less functional armor.',
         'all': 'Alias to enable plus, chalice and fashion options.',
-        'set': 'All armor chosen will be from same set.', #to be implemented
-        'dual': 'Two trick weapons and two firearms will be chosen.' #to be implemented
+        'set': 'All armor chosen will be from same set. To be implemented! :)', #to be implemented
+        'dual': 'Two trick weapons and two firearms will be chosen.'
     }
+    for opt in options:
+        print('-' + opt + '  :  ' + options[opt])
 
 def choose_item(db_table, args):
     items = db_table.all()
@@ -50,7 +52,7 @@ def main():
     args = getopts(argv)
 
     if 'help' in args:
-        print(list_options)
+        list_options()
         return
 
     db = TinyDB('data/db.json')
