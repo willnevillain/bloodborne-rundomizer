@@ -19,7 +19,8 @@ def choose_item(db_table, args):
     while not chosen:
         rand = random.randint(0, len(items) - 1)
         item = items[rand]
-        items_seen.append(item['name'])
+        if item['name'] not in items_seen:
+            items_seen.append(item['name'])
         if len(items_seen) >= len(items):
             return {
                 'message': 'Saw all items and found none suitable! Verify data files and parameters!'
