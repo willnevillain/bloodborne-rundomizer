@@ -4,6 +4,7 @@ from hunter import Hunter
 
 import random
 
+
 def getopts(argv):
     opts = []
     while(argv):
@@ -11,6 +12,7 @@ def getopts(argv):
             opts.append(argv[0][1:])
         argv = argv[1:]
     return opts
+
 
 def list_options():
     options = {
@@ -23,6 +25,31 @@ def list_options():
     }
     for opt in options:
         print('-' + opt + '  :  ' + options[opt])
+
+
+def populate_items_from_db():
+    all_items = {}
+    db = TinyDB('data/db.json')
+    for table_name in db.tables():
+        if table_name != '_default':
+            all_items[table_name] = db.table(table_name).all()
+    return all_items
+
+
+def remove_undesired_items(all_items, args):
+    relevant_args = ['plus', 'chalice', 'fashion']
+    for item_type, all_items_of_type in all_items.items():
+        to_be_removed = []
+        for item in all_items_of_type:
+            for arg in relevant_args:
+                if arg in item:
+                    if item[arg] == 'True' and arg not in args:
+                        print("item identified: " + str(item))
+                        to_be_removed.append(item)
+                        break
+        for item in to_be_removed:
+            all_items_of_type.remove(item)
+
 
 def choose_item(items, args):
     item = None
@@ -37,15 +64,9 @@ def choose_item(items, args):
             return {
                 'message': 'Saw all items and found none suitable! Verify data files and parameters!'
             }
-        if 'all' not in args:
-            if item['plus'] == 'True' and 'plus' not in args:
-                continue
-            if item['chalice'] == 'True' and 'chalice' not in args:
-                continue
-            if 'fashion' in item and item['fashion'] == 'True' and 'fashion' not in args:
-                continue
         chosen = True
     return items[rand]
+
 
 def choose_two_items(items, args):
     both_items = [choose_item(items, args)]
@@ -59,33 +80,29 @@ def choose_two_items(items, args):
     both_items.append(item)
     return both_items
 
+
 def main():
     args = getopts(argv)
 
     if 'help' in args:
         list_options()
         return
-
-    db = TinyDB('data/db.json')
+    
+    all_items = populate_items_from_db()
+    remove_undesired_items(all_items, args)
     chosen_items = {}
-    for table_name in db.tables():
-        if table_name == '_default':
-            continue
-        items = db.table(table_name).all()
-        if 'dual' in args and table_name in ['trick_weapons', 'firearms']:
-            weapons = choose_two_items(items, args)
+    for item_type, all_items_of_type in all_items.items():
+        if 'dual' in args and item_type in ['trick_weapons', 'firearms']:
+            weapons = choose_two_items(all_items_of_type, args)
             chosen_items[weapons[0]['subtype']] = weapons
         else:
-            item = choose_item(items, args)
+            item = choose_item(all_items_of_type, args)
             chosen_items[item['subtype']] = item
     
     hunter = Hunter('Build', chosen_items)
     hunter.add_items(chosen_items)
     hunter.calculate_stats()
-    print(hunter.items)
-    print(hunter.req_stats)
     hunter.display_info()
-    
     
 
 if __name__ == '__main__':
