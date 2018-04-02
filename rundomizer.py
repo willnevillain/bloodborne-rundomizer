@@ -24,8 +24,7 @@ def list_options():
     for opt in options:
         print('-' + opt + '  :  ' + options[opt])
 
-def choose_item(db_table, args):
-    items = db_table.all()
+def choose_item(items, args):
     item = None
     chosen = False
     items_seen = []
@@ -48,6 +47,18 @@ def choose_item(db_table, args):
         chosen = True
     return items[rand]
 
+def choose_two_items(items, args):
+    both_items = [choose_item(items, args)]
+    item = None
+    chosen = False
+    while not chosen:
+        item = choose_item(items, args)
+        if item in both_items:
+            continue
+        chosen = True
+    both_items.append(item)
+    return both_items
+
 def main():
     args = getopts(argv)
 
@@ -60,15 +71,12 @@ def main():
     for table_name in db.tables():
         if table_name == '_default':
             continue
-        table = db.table(table_name)
+        items = db.table(table_name).all()
         if 'dual' in args and table_name in ['trick_weapons', 'firearms']:
-            weapon = choose_item(table, args)
-            chosen_items[weapon['subtype']] = [weapon]
-            #fixme - same weapon can be chosen twice
-            weapon = choose_item(table, args)
-            chosen_items[weapon['subtype']].append(weapon)
+            weapons = choose_two_items(items, args)
+            chosen_items[weapons[0]['subtype']] = weapons
         else:
-            item = choose_item(table, args)
+            item = choose_item(items, args)
             chosen_items[item['subtype']] = item
     
     hunter = Hunter('Build', chosen_items)
