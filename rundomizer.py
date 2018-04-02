@@ -21,7 +21,8 @@ def list_options():
         'fashion': 'Armor will include items with no set, and less functional armor.',
         'all': 'Alias to enable plus, chalice and fashion options.',
         'set': 'All armor chosen will be from same set. To be implemented! :)', #to be implemented
-        'dual': 'Two trick weapons and two firearms will be chosen.'
+        'dual': 'Two trick weapons and two firearms will be chosen.',
+        'no-big-guns': 'Guns requiring 27+ strength will be not be chosen'
     }
     for opt in options:
         print('-' + opt + '  :  ' + options[opt])
@@ -44,11 +45,17 @@ def remove_undesired_items(all_items, args):
             for arg in relevant_args:
                 if arg in item:
                     if item[arg] == 'True' and arg not in args:
-                        print("item identified: " + str(item))
+                        print("removing item " + item['name'] + " due to missing flag " + arg)
                         to_be_removed.append(item)
                         break
+            if item_type == 'firearms' and 'no-big-guns' in args:
+                if int(item['str_req']) >= 27:
+                    print("removing big gun: " + str(item))
+                    to_be_removed.append(item)
         for item in to_be_removed:
             all_items_of_type.remove(item)
+
+
 
 
 def choose_item(items, args):
