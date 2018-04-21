@@ -1,0 +1,37 @@
+armor
+chest
+#name, set, ng_plus_required, chalices_required, fashion_only
+Ashen Hunter Garb, Ashen Hunter, False, False, False
+Beast Hide Garb, Brador, False, False, False
+Black Church Garb, Black Church, False, False, False
+Butcher Garb, Butcher, False, False, False
+Bone Ash Armor, Bone Ash, False, True, False
+Cainhurst Armor, Cainhurst, False, False, False
+Charred Hunter Garb, Charred, False, False, False
+Choir Garb, Choir, False, False, False
+Constable's Garb, Constable, False, False, False
+Crowfeather Garb, Crowfeather, False, False, False
+Decorative Old Hunter Garb, Decorative Old Hunter, False, False, False
+Doll Clothes, Doll, False, False, True
+Executioner Garb, Executioner, False, False, False
+Foreign Garb, Foreign, False, False, False
+Gascoigne's Garb, Gascoigne, False, False, False
+Gehrman's Hunter Garb, Gehrman, True, False, False
+Graveguard Robe, Graveguard, False, False, False
+Harrowed Garb, Harrowed, False, False, False
+Henryk's Hunter Garb, Henryk, False, False, False
+Hunter Garb, Hunter A, False, False, False
+Hunter Garb, Hunter B, False, False, False
+Khaki Haori, Yamamura, False, False, False
+Knight's Garb, Knight, False, False, False
+Madman Garb, Madman, False, True, False
+Maria Hunter Garb, Maria, False, False, False
+Noble Dress, NO_SET, False, False, True
+Old Hunter Garb, Old Hunter, False, False, False
+Student Uniform, NO_SET, False, False, True
+Student Uniform Variant, NO_SET, False, False, True
+Sweaty Clothes, NO_SET, False, False, True
+Tomb Prospector Garb, Tomb Prospector, False, False, False
+White Church Garb, White Church, False, False, False
+Yahar'gul Black Garb, Yahar'gul, False, False, False
+Yharnam Hunter Garb, Yharnam Hunter, False, False, False

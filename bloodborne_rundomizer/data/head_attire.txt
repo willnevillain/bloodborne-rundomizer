@@ -1,0 +1,38 @@
+armor
+head
+#name, set, ng_plus_required, chalices_required, fashion_only
+Beak Mask, Crowfeather, False, False, False
+Black Church Hat, Black Church, False, False, False
+Black Hood, Foreign, False, False, False
+Black Hooded Iron Helm, Yahar'gul, False, False, False
+Blindfold Cap, Choir, False, False, False
+Bone Ash Mask, Bone Ash, False, True, False
+Brador's Testimony, Brador, False, False, False
+Butcher Mask, Butcher, False, False, False
+Cainhurst Helmet, Cainhurst, False, False, False
+Crown of Illusions, NO_SET, False, False, True
+Doll Hat, Doll, False, False, True
+Enlarged Head, NO_SET, False, False, True
+Gascoigne's Cap, Gascoigne, False, False, False
+Gehrman's Hunter Cap, Gehrman, True, False, False
+Gold Ardeo, Executioner, False, False, False
+Graveguard Mask, Graveguard, False, False, False
+Grey Wolf Cap, Ashen Hunter, False, False, False
+Harrowed Hood, Harrowed, False, False, False
+Henryk's Hunter Cap, Henryk, False, False, False
+Hunter Hat, Hunter A, False, False, False
+Iron Yahar'Gul Helm, Yahar'gul, False, False, True
+Knight's Wig, Knight, False, False, False
+Madman Hood, Madman, False, True, False
+Maria Hunter Cap, Maria, False, False, False
+Master's Iron Helm, Constable, False, False, False
+Mensis Cage, NO_SET, False, False, True
+Old Hunter Cap, Old Hunter, False, False, False
+Old Hunter Top Hat, Decorative Old Hunter, False, False, False
+One-Eyed Iron Helm, Constable, False, False, True
+Rumpled Yharnam Hat, NO_SET, False, False, True
+Tomb Prospector Hood, Tomb Prospector, False, False, False
+Top Hat, Hunter B, False, False, False
+White Church Hat, White Church, False, False, False
+Yamamura Hunter Hat, Yamamura, False, False, False
+Yharnam Hunter Cap, Yharnam Hunter, False, False, False
