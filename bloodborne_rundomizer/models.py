@@ -8,9 +8,10 @@ class Equipment(Item):
         self.location = location
 
 class Armor(Equipment):
-    def __init__(self, name, location, armor_type, fashionable):
+    def __init__(self, name, location, armor_type, armor_set, fashionable):
         Equipment.__init__(self, name, location)
         self.armor_type = armor_type
+        self.armor_set = armor_set
         self.fashionable = fashionable
 
 class Weapon(Equipment):
