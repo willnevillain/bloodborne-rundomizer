@@ -1,5 +1,6 @@
 from tinydb import TinyDB
 from sys import argv
+from models import *
 from hunter import Hunter
 
 import random
@@ -26,6 +27,35 @@ def list_options():
     }
     for opt in options:
         print('-' + opt + '  :  ' + options[opt])
+
+
+def populate_weapons():
+    weapons = []
+    with open('data/weapons.txt') as f:
+        for row in f:
+            if row[0] != '#':
+                weapon_details = row.split(',')
+                name = weapon_details[0].strip()
+                location = weapon_details[1].strip()
+                weapon_type = weapon_details[2].strip()
+                requirements = dict([('str', weapon_details[3].strip()), ('skl', weapon_details[4].strip()), ('blt', weapon_details[5].strip()), ('arc', weapon_details[6].strip())])
+                weapons.append(Weapon(name, location, weapon_type, requirements))
+    return weapons
+
+
+def populate_armor():
+    armor = []
+    with open('data/armor.txt') as f:
+        for row in f:
+            if row[0] != '#':
+                armor_details = row.split(',')
+                name = armor_details[0].strip()
+                location = armor_details[1].strip()
+                armor_type = armor_details[2].strip()
+                armor_set = armor_details[3].strip()
+                fashionable = armor_details[4].strip()
+                armor.append(Armor(name, location, armor_type, armor_set, fashionable))
+    return armor
 
 
 def populate_items_from_db():
@@ -113,4 +143,8 @@ def main():
     
 
 if __name__ == '__main__':
-    main()
+    for weapon in populate_weapons():
+        print(weapon.__dict__)
+    for armor in populate_armor():
+        print(armor.__dict__)
+    #main()
