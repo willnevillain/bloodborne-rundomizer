@@ -1,0 +1,43 @@
+#name, location, weapon_type, str_req, skl_req, blt_req, arc_req
+Amygdalan Arm, NG, Trick, 17, 9, 0, 0
+Beast Claw, Chalice, Trick, 14, 12, 0, 0
+Beasthunter Saif, NG, Trick, 9, 11, 0, 0
+Beast Cutter, NG, Trick, 11, 9, 0, 0
+Blade of Mercy, NG, Trick, 7, 11, 0, 0
+Bloodletter, NG, Trick, 14, 6, 16, 0
+Boom Hammer, NG, Trick, 14, 8, 0, 0
+Burial Blade, NG+, Trick, 10, 12, 0, 0
+Chikage, NG, Trick, 10, 14, 12, 0
+Church Pick, NG, Trick, 9, 14, 0, 0
+Holy Moonlight Sword, NG, Trick, 16, 12, 0, 14
+Hunter Axe, NG, Trick, 9, 8, 0, 0
+Kirkhammer, NG, Trick, 16, 10, 0, 0
+Kos Parasite, NG, Trick, 0, 0, 0, 20
+Logarius' Wheel, NG, Trick, 20, 12, 0, 10
+Ludwig's Holy Blade, NG, Trick, 16, 12, 0, 0
+Rakuyo, NG, Trick, 10, 20, 0, 0
+Reiterpallasch, NG, Trick, 8, 12, 10, 0
+Rifle Spear, NG, Trick, 10, 11, 9, 0
+Saw Cleaver, NG, Trick, 8, 7, 0, 0
+Saw Spear, NG, Trick, 7, 8, 0, 0
+Simon's Bowblade, NG, Trick, 8, 15, 9, 0
+Stake Driver, NG, Trick, 18, 9, 0, 0
+Threaded Cane, NG, Trick, 7, 9, 0, 0
+Tonitrus, NG, Trick, 12, 8, 0, 0
+Whirligig Saw, NG, Trick, 18, 12, 0, 0
+Cannon, NG, Firearm, 30, 13, 0, 0
+Church Cannon, NG, Firearm, 27, 0, 16, 0
+Evelyn, NG, Firearm, 9, 11, 18, 0
+Fist of Gratia, NG, Firearm, 7, 9, 5, 0
+Flamesprayer, NG, Firearm, 0, 8, 0, 8
+Gatling Gun, NG, Firearm, 28, 12, 0, 0
+Hunter Blunderbuss, NG, Firearm, 7, 9, 5, 0
+Hunter Pistol, NG, Firearm, 7, 9, 5, 0
+Hunter's Torch, NG, Firearm, 6, 0, 0, 0
+Loch Shield, NG, Firearm, 11, 8, 0, 0
+Ludwig's Rifle, NG, Firearm, 9, 10, 9, 0
+Piercing Rifle, NG, Firearm, 9, 10, 9, 0
+Repeating Pistol, NG, Firearm, 10, 11, 8, 0
+Rosmarinus, NG, Firearm, 0, 8, 0, 8
+Torch, NG, Firearm, 6, 0, 0, 0
+Wooden Shield, NG, Firearm, 8, 8, 0, 0
