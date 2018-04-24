@@ -38,10 +38,9 @@ def populate_weapons():
                 name = weapon_details[0].strip()
                 location = weapon_details[1].strip()
                 weapon_type = weapon_details[2].strip()
-                requirements = dict([('str', weapon_details[3].strip()), ('skl', weapon_details[4].strip()), ('blt', weapon_details[5].strip()), ('arc', weapon_details[6].strip())])
+                requirements = dict([('str', int(weapon_details[3].strip())), ('skl', int(weapon_details[4].strip())), ('blt', int(weapon_details[5].strip())), ('arc', int(weapon_details[6].strip()))])
                 weapons.append(Weapon(name, location, weapon_type, requirements))
     return weapons
-
 
 def populate_armor():
     armor = []
@@ -57,6 +56,52 @@ def populate_armor():
                 armor.append(Armor(name, location, armor_type, armor_set, fashionable))
     return armor
 
+def execute_weapon_filters(weapons, args):
+    if 'no-plus' in args:
+        weapons = remove_plus_items(weapons)
+    if 'no-chalice' in args:
+        weapons = remove_chalice_items(weapons)
+    if 'no-big-guns' in args:
+        weapons = remove_big_guns(weapons)
+    return weapons
+
+def execute_armor_filters(armor, args):
+    if 'no-plus' in args:
+        armor = remove_plus_items(armor)
+    if 'no-chalice' in args:
+        armor = remove_chalice_items(armor)
+    if 'no-fashion' in args:
+        armor = remove_fashionable_items(armor)
+    return armor
+
+def remove_plus_items(equipment):
+    new_equipment = []
+    for item in equipment:
+        if item.location != 'NG+':
+            new_equipment.append(item)
+    return new_equipment
+
+def remove_chalice_items(equipment):
+    new_equipment = []
+    for item in equipment:
+        if item.location != 'Chalice':
+            new_equipment.append(item)
+    return new_equipment
+
+def remove_fashionable_items(armor):
+    new_armor = []
+    for piece in armor:
+        if piece.fashionable != 'True':
+            new_armor.append(piece)
+    return new_armor
+
+def remove_big_guns(weapons):
+    new_weapons = []
+    for piece in weapons:
+        if piece.weapon_type != 'Firearm' or piece.requirements['str'] < 27:
+            new_weapons.append(piece)
+    return new_weapons
+            
 
 def populate_items_from_db():
     all_items = {}
@@ -143,8 +188,4 @@ def main():
     
 
 if __name__ == '__main__':
-    for weapon in populate_weapons():
-        print(weapon.__dict__)
-    for armor in populate_armor():
-        print(armor.__dict__)
-    #main()
+    main()
