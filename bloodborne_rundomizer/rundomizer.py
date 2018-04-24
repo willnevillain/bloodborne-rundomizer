@@ -98,8 +98,18 @@ def remove_fashionable_items(armor):
     return new_armor
 
 
-def take_equipment(equipment):
-    return equipment[random.randint(0, len(equipment) - 1)]
+def take_random_from_list(items):
+    return items[random.randint(0, len(items) - 1)]
+
+
+def choose_equipment_for_slot(equipment, slot):
+    chosen = False
+    selected = None
+    while not chosen:
+        selected = take_random_from_list(equipment)
+        if selected.slot == slot:
+            chosen = True
+    return selected
 
 
 def choose_all_weapons(options):
@@ -107,14 +117,8 @@ def choose_all_weapons(options):
     if not weapons:
         raise InvalidInventoryError('No suitable weapons found - please verify inventory file and filters')
     chosen_weapons = []
-    for weapon_type in Weapon.types:
-        chosen = False
-        weapon = None
-        while not chosen:
-            weapon = take_equipment(weapons)
-            if weapon.weapon_type == weapon_type:
-                chosen = True
-        chosen_weapons.append(weapon)
+    for slot in Weapon.slots:
+        chosen_weapons.append(choose_equipment_for_slot(weapons, slot))
     return chosen_weapons
 
 
@@ -123,14 +127,8 @@ def choose_all_armor(options):
     if not armor:
         raise InvalidInventoryError('No suitable armor found - please verify inventory file and filters')
     chosen_armor = []
-    for armor_type in Armor.types:
-        chosen = False
-        armor_piece = None
-        while not chosen:
-            armor_piece = take_equipment(armor)
-            if armor_piece.armor_type == armor_type:
-                chosen = True
-        chosen_armor.append(armor_piece)
+    for slot in Armor.slots:
+        chosen_armor.append(choose_equipment_for_slot(armor, slot))
     return chosen_armor
 
 
@@ -145,8 +143,11 @@ def choose_all_equipment(options):
 
 def main():
     options = get_options()
-    for equipment in choose_all_equipment(options):
+    all_equipment = choose_all_equipment(options)
+    for equipment in all_equipment:
         print(equipment)
+    myDude = Hunter(all_equipment)
+    myDude.display_info
     
 
 if __name__ == '__main__':
