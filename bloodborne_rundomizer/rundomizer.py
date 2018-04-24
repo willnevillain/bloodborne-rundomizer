@@ -53,15 +53,15 @@ def filter_equipment(equipment, options):
 
 
 def filter_weapons(weapons, options):
-    weapons = filter_equipment(weapons)
-    if options.no_bigguns
+    weapons = filter_equipment(weapons, options)
+    if options.no_bigguns:
         weapons = remove_big_guns(weapons)
     return weapons
 
 
 def filter_armor(armor, options):
-    armor = filter_equipment(armor)
-    if options.no_fashion
+    armor = filter_equipment(armor, options)
+    if options.no_fashion:
         armor = remove_fashionable_items(armor)
     return armor
 
@@ -98,26 +98,55 @@ def remove_fashionable_items(armor):
     return new_armor
 
 
-def choose_equipment(equipment):
+def take_equipment(equipment):
     return equipment[random.randint(0, len(equipment) - 1)]
 
 
-def choose_weapon(options):
+def choose_all_weapons(options):
     weapons = filter_weapons(populate_weapons(), options)
     if not weapons:
         raise InvalidInventoryError('No suitable weapons found - please verify inventory file and filters')
-    return choose_equipment(weapons)
+    chosen_weapons = []
+    for weapon_type in Weapon.types:
+        chosen = False
+        weapon = None
+        while not chosen:
+            weapon = take_equipment(weapons)
+            if weapon.weapon_type == weapon_type:
+                chosen = True
+        chosen_weapons.append(weapon)
+    return chosen_weapons
 
 
-def choose_armor(options):
+def choose_all_armor(options):
     armor = filter_armor(populate_armor(), options)
     if not armor:
         raise InvalidInventoryError('No suitable armor found - please verify inventory file and filters')
-    return choose_equipment(armor)
+    chosen_armor = []
+    for armor_type in Armor.types:
+        chosen = False
+        armor_piece = None
+        while not chosen:
+            armor_piece = take_equipment(armor)
+            if armor_piece.armor_type == armor_type:
+                chosen = True
+        chosen_armor.append(armor_piece)
+    return chosen_armor
+
+
+def choose_all_equipment(options):
+    equipment = []
+    for weapon in choose_all_weapons(options):
+        equipment.append(weapon)
+    for armor in choose_all_armor(options):
+        equipment.append(armor)
+    return equipment
 
 
 def main():
     options = get_options()
+    for equipment in choose_all_equipment(options):
+        print(equipment)
     
 
 if __name__ == '__main__':
