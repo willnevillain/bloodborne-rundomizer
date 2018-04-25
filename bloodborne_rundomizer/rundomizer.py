@@ -10,7 +10,6 @@ def get_options():
     parser = argparse.ArgumentParser(prog='bloodborne-rundomizer')
     parser.add_argument('-no_bigguns', action='store_true', help='Remove all firearms with a strength requirement of 27+ from item pool.')
     parser.add_argument('-no_chalice', action='store_true', help='Remove chalice dungeon items from item pool.')
-    parser.add_argument('-no_plus', action='store_true', help='Remove NG+ items from item pool.')
     parser.add_argument('-no_fashion', action='store_true', help='Remove fashionable items from item pool. You fiend.')
     return parser.parse_args()
 
@@ -22,10 +21,10 @@ def populate_weapons():
             if row[0] != '#':
                 weapon_details = row.split(',')
                 name = weapon_details[0].strip()
-                location = weapon_details[1].strip()
+                chalice = weapon_details[1].strip()
                 weapon_type = weapon_details[2].strip()
                 requirements = dict([('str', int(weapon_details[3].strip())), ('skl', int(weapon_details[4].strip())), ('blt', int(weapon_details[5].strip())), ('arc', int(weapon_details[6].strip()))])
-                weapons.append(Weapon(name, location, weapon_type, requirements))
+                weapons.append(Weapon(name, weapon_type, chalice, requirements))
     return weapons
 
 
@@ -36,17 +35,15 @@ def populate_armor():
             if row[0] != '#':
                 armor_details = row.split(',')
                 name = armor_details[0].strip()
-                location = armor_details[1].strip()
+                chalice = armor_details[1].strip()
                 armor_type = armor_details[2].strip()
                 armor_set = armor_details[3].strip()
                 fashionable = armor_details[4].strip()
-                armor.append(Armor(name, location, armor_type, armor_set, fashionable))
+                armor.append(Armor(name, armor_type, chalice, armor_set, fashionable))
     return armor
 
 
 def filter_equipment(equipment, options):
-    if options.no_plus:
-        equipment = remove_plus_items(equipment)
     if options.no_chalice:
         equipment = remove_chalice_items(equipment)
     return equipment
@@ -66,18 +63,10 @@ def filter_armor(armor, options):
     return armor
 
 
-def remove_plus_items(equipment):
-    new_equipment = []
-    for item in equipment:
-        if item.location != 'NG+':
-            new_equipment.append(item)
-    return new_equipment
-
-
 def remove_chalice_items(equipment):
     new_equipment = []
     for item in equipment:
-        if item.location != 'Chalice':
+        if item.chalice != 'True':
             new_equipment.append(item)
     return new_equipment
 

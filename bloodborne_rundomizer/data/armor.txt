@@ -1,129 +1,129 @@
-#name, location, armor_type, armor_set, fashionable
-Ashen Hunter Garb, NG, Chest, Ashen Hunter, False
-Beast Hide Garb, NG, Chest, Brador, False
-Black Church Garb, NG, Chest, Black Church, False
-Butcher Garb, NG, Chest, Butcher, False
-Bone Ash Armor, Chalice, Chest, Bone Ash, False
-Cainhurst Armor, NG, Chest, Cainhurst, False
-Charred Hunter Garb, NG, Chest, Charred, False
-Choir Garb, NG, Chest, Choir, False
-Constable's Garb, NG, Chest, Constable, False
-Crowfeather Garb, NG, Chest, Crowfeather, False
-Decorative Old Hunter Garb, NG, Chest, Decorative Old Hunter, False
-Doll Clothes, NG, Chest, Doll, True
-Executioner Garb, NG, Chest, Executioner, False
-Foreign Garb, NG, Chest, Foreign, False
-Gascoigne's Garb, NG, Chest, Gascoigne, False
-Gehrman's Hunter Garb, NG+, Chest, Gehrman, False
-Graveguard Robe, NG, Chest, Graveguard, False
-Harrowed Garb, NG, Chest, Harrowed, False
-Henryk's Hunter Garb, NG, Chest, Henryk, False
-Hunter Garb, NG, Chest, Hunter A, False
-Hunter Garb, NG, Chest, Hunter B, False
-Khaki Haori, NG, Chest, Yamamura, False
-Knight's Garb, NG, Chest, Knight, False
-Madman Garb, Chalice, Chest, Madman, False
-Maria Hunter Garb, NG, Chest, Maria, False
-Noble Dress, NG, Chest, NO_SET, True
-Old Hunter Garb, NG, Chest,Old Hunter, False
-Student Uniform, NG, Chest, NO_SET, True
-Student Uniform Variant, NG, Chest, NO_SET, True
-Sweaty Clothes, NG, Chest, NO_SET, True
-Tomb Prospector Garb, NG, Chest, Tomb Prospector, False
-White Church Garb, NG, Chest, White Church, False
-Yahar'gul Black Garb, NG, Chest, Yahar'gul, False
-Yharnam Hunter Garb, NG, Chest, Yharnam Hunter, False
-Ashen Hunter Gloves, NG, Hand, Ashen Hunter, False
-Bloodied Arm Bands, NG, Hand, Brador, False
-Bone Ash Gauntlets, Chalice, Hand, Bone Ash, False
-Butcher Gloves, NG, Hand, Butcher, False
-Cainhurst Gauntlets, NG, Hand, Cainhurst, False
-Charred Hunter Gloves, NG, Hand, Charred, False
-Choir Gloves, NG, Hand, Choir, False
-Crowfeather Manchettes, NG, Hand, Crowfeather, False
-Doll Gloves, NG, Hand, Doll, True
-Executioner Gauntlets, NG, Hand, Executioner, False
-Gascoigne's Gloves, NG, Hand, Gascoigne, False
-Graveguard Manchettes, NG, Hand, Graveguard, False
-Harrowed Gloves, NG, Hand, Harrowed, False
-Henryk's Hunter Gloves, NG, Hand, Henryk, False
-Hunter Gloves, NG, Hand, Hunter A, False
-Hunter Gloves, NG, Hand, Hunter B, False
-Knight's Gloves, NG, Hand, Knight, False
-Madman Manchettes, Chalice, Hand, Madman, False
-Maria Hunter Gloves, NG, Hand, Maria, False
-Old Hunter Arm Bands, NG, Hand, Yamamura, False
-Old Hunter Gloves, NG, Hand, Old Hunter, False
-Old Hunter Gloves, NG, Hand, Decorative Old Hunter, False
-Sullied Bandage, NG, Hand, Foreign, False
-Surgical Long Gloves, NG, Hand, Black Church, False
-Surgical Long Gloves, NG, Hand, White Church, False
-Tomb Prospector Gloves, NG, Hand, Tomb Prospector, False
-Yahar'gul Black Gloves, NG, Hand, Yahar'gul, False
-Yharnam Hunter Gloves, NG, Hand, Yharnam Hunter, False
-Beak Mask, NG, Head, Crowfeather, False
-Black Church Hat, NG, Head, Black Church, False
-Black Hood, NG, Head, Foreign, False
-Black Hooded Iron Helm, NG, Head, Yahar'gul, False
-Blindfold Cap, NG, Head, Choir, False
-Bone Ash Mask, Chalice, Head, Bone Ash, False
-Brador's Testimony, NG, Head, Brador, False
-Butcher Mask, NG, Head, Butcher, False
-Cainhurst Helmet, NG, Head, Cainhurst, False
-Crown of Illusions, NG, Head, NO_SET, True
-Doll Hat, NG, Head, Doll, True
-Enlarged Head, NG, Head, NO_SET, True
-Gascoigne's Cap, NG, Head, Gascoigne, False
-Gehrman's Hunter Cap, NG+, Head, Gehrman, False
-Gold Ardeo, NG, Head, Executioner, False
-Graveguard Mask, NG, Head, Graveguard, False
-Grey Wolf Cap, NG, Head, Ashen Hunter, False
-Harrowed Hood, NG, Head, Harrowed, False
-Henryk's Hunter Cap, NG, Head, Henryk, False
-Hunter Hat, NG, Head, Hunter A, False
-Iron Yahar'Gul Helm, NG, Head, Yahar'gul, True
-Knight's Wig, NG, Head, Knight, False
-Madman Hood, Chalice, Head, Madman, False
-Maria Hunter Cap, NG, Head, Maria, False
-Master's Iron Helm, NG, Head, Constable, False
-Mensis Cage, NG, Head, NO_SET, True
-Old Hunter Cap, NG, Head, Old Hunter, False
-Old Hunter Top Hat, NG, Head, Decorative Old Hunter, False
-One-Eyed Iron Helm, NG, Head, Constable, True
-Rumpled Yharnam Hat, NG, Head, NO_SET, True
-Tomb Prospector Hood, NG, Head, Tomb Prospector, False
-Top Hat, NG, Head, Hunter B, False
-White Church Hat, NG, Head, White Church, False
-Yamamura Hunter Hat, NG, Head, Yamamura, False
-Yharnam Hunter Cap, NG, Head, Yharnam Hunter, False
-Arianna's Shoes, NG, Leg, NO_SET, True
-Ashen Hunter Trousers, NG, Leg, Ashen Hunter, False
-Black Church Trousers/Dress, NG, Leg, Black Church, False
-Bloodied Trousers, NG, Leg, Brador, False
-Bone Ash Leggings, Chalice, Leg, Bone Ash, False
-Butcher Trousers, NG, Leg, Butcher, False
-Cainhurst Leggings, NG, Leg, Cainhurst, False
-Charred Hunter Trousers, NG, Leg, Charred, False
-Choir Trousers, NG, Leg, Choir, False
-Constable Trousers, NG, Leg, Constable, False
-Crowfeather Trousers, NG, Leg, Crowfeather, False
-Decorative Old Hunter Trousers, NG, Leg, Decorative Old Hunter, False
-Doll Skirt, NG, Leg, Doll, True
-Executioner Trousers, NG, Leg, Executioner, False
-Foreign Trousers, NG, Leg, Foreign, False
-Gascoigne's Trousers, NG, Leg, Gascoigne, False
-Gehrman's Hunter Trousers, NG+, Leg, Gehrman, False
-Graveguard Kilt, NG, Leg, Graveguard, False
-Harrowed Trousers, NG, Leg, Harrowed, False
-Henryk's Hunter Trousers, NG, Leg, Henryk, False
-Hunter Trousers, NG, Leg, Hunter A, False
-Hunter Trousers, NG, Leg, Hunter B, False
-Knight's Trousers/Dress, NG, Leg, Knight, False
-Madman Leggings, Chalice, Leg, Madman, False
-Maria Hunter Trousers, NG, Leg, Maria, False
-Student Trousers, NG, Leg, NO_SET, True
-Tomb Prospector NG, Leg, Trousers, Tomb Prospector, False
-Wine Hakama, NG, Leg, Yamamura, False
-White Church Trousers/Dress, NG, Leg, White Church, False
-Yahar'gul Black Trousers, NG, Leg, Yahar'gul, False
-Yharnam Hunter Trousers, NG, Leg, Yharnam Hunter, False
+#name, chalice, armor_type, armor_set, fashionable
+Ashen Hunter Garb, False, Chest, Ashen Hunter, False
+Beast Hide Garb, False, Chest, Brador, False
+Black Church Garb, False, Chest, Black Church, False
+Butcher Garb, False, Chest, Butcher, False
+Bone Ash Armor, True, Chest, Bone Ash, False
+Cainhurst Armor, False, Chest, Cainhurst, False
+Charred Hunter Garb, False, Chest, Charred, False
+Choir Garb, False, Chest, Choir, False
+Constable's Garb, False, Chest, Constable, False
+Crowfeather Garb, False, Chest, Crowfeather, False
+Decorative Old Hunter Garb, False, Chest, Decorative Old Hunter, False
+Doll Clothes, False, Chest, Doll, True
+Executioner Garb, False, Chest, Executioner, False
+Foreign Garb, False, Chest, Foreign, False
+Gascoigne's Garb, False, Chest, Gascoigne, False
+Gehrman's Hunter Garb, False, Chest, Gehrman, False
+Graveguard Robe, False, Chest, Graveguard, False
+Harrowed Garb, False, Chest, Harrowed, False
+Henryk's Hunter Garb, False, Chest, Henryk, False
+Hunter Garb, False, Chest, Hunter A, False
+Hunter Garb, False, Chest, Hunter B, False
+Khaki Haori, False, Chest, Yamamura, False
+Knight's Garb, False, Chest, Knight, False
+Madman Garb, True, Chest, Madman, False
+Maria Hunter Garb, False, Chest, Maria, False
+Noble Dress, False, Chest, NO_SET, True
+Old Hunter Garb, False, Chest,Old Hunter, False
+Student Uniform, False, Chest, NO_SET, True
+Student Uniform Variant, False, Chest, NO_SET, True
+Sweaty Clothes, False, Chest, NO_SET, True
+Tomb Prospector Garb, False, Chest, Tomb Prospector, False
+White Church Garb, False, Chest, White Church, False
+Yahar'gul Black Garb, False, Chest, Yahar'gul, False
+Yharnam Hunter Garb, False, Chest, Yharnam Hunter, False
+Ashen Hunter Gloves, False, Hand, Ashen Hunter, False
+Bloodied Arm Bands, False, Hand, Brador, False
+Bone Ash Gauntlets, True, Hand, Bone Ash, False
+Butcher Gloves, False, Hand, Butcher, False
+Cainhurst Gauntlets, False, Hand, Cainhurst, False
+Charred Hunter Gloves, False, Hand, Charred, False
+Choir Gloves, False, Hand, Choir, False
+Crowfeather Manchettes, False, Hand, Crowfeather, False
+Doll Gloves, False, Hand, Doll, True
+Executioner Gauntlets, False, Hand, Executioner, False
+Gascoigne's Gloves, False, Hand, Gascoigne, False
+Graveguard Manchettes, False, Hand, Graveguard, False
+Harrowed Gloves, False, Hand, Harrowed, False
+Henryk's Hunter Gloves, False, Hand, Henryk, False
+Hunter Gloves, False, Hand, Hunter A, False
+Hunter Gloves, False, Hand, Hunter B, False
+Knight's Gloves, False, Hand, Knight, False
+Madman Manchettes, True, Hand, Madman, False
+Maria Hunter Gloves, False, Hand, Maria, False
+Old Hunter Arm Bands, False, Hand, Yamamura, False
+Old Hunter Gloves, False, Hand, Old Hunter, False
+Old Hunter Gloves, False, Hand, Decorative Old Hunter, False
+Sullied Bandage, False, Hand, Foreign, False
+Surgical Long Gloves, False, Hand, Black Church, False
+Surgical Long Gloves, False, Hand, White Church, False
+Tomb Prospector Gloves, False, Hand, Tomb Prospector, False
+Yahar'gul Black Gloves, False, Hand, Yahar'gul, False
+Yharnam Hunter Gloves, False, Hand, Yharnam Hunter, False
+Beak Mask, False, Head, Crowfeather, False
+Black Church Hat, False, Head, Black Church, False
+Black Hood, False, Head, Foreign, False
+Black Hooded Iron Helm, False, Head, Yahar'gul, False
+Blindfold Cap, False, Head, Choir, False
+Bone Ash Mask, True, Head, Bone Ash, False
+Brador's Testimony, False, Head, Brador, False
+Butcher Mask, False, Head, Butcher, False
+Cainhurst Helmet, False, Head, Cainhurst, False
+Crown of Illusions, False, Head, NO_SET, True
+Doll Hat, False, Head, Doll, True
+Enlarged Head, False, Head, NO_SET, True
+Gascoigne's Cap, False, Head, Gascoigne, False
+Gehrman's Hunter Cap, False, Head, Gehrman, False
+Gold Ardeo, False, Head, Executioner, False
+Graveguard Mask, False, Head, Graveguard, False
+Grey Wolf Cap, False, Head, Ashen Hunter, False
+Harrowed Hood, False, Head, Harrowed, False
+Henryk's Hunter Cap, False, Head, Henryk, False
+Hunter Hat, False, Head, Hunter A, False
+Iron Yahar'Gul Helm, False, Head, Yahar'gul, True
+Knight's Wig, False, Head, Knight, False
+Madman Hood, True, Head, Madman, False
+Maria Hunter Cap, False, Head, Maria, False
+Master's Iron Helm, False, Head, Constable, False
+Mensis Cage, False, Head, NO_SET, True
+Old Hunter Cap, False, Head, Old Hunter, False
+Old Hunter Top Hat, False, Head, Decorative Old Hunter, False
+One-Eyed Iron Helm, False, Head, Constable, True
+Rumpled Yharnam Hat, False, Head, NO_SET, True
+Tomb Prospector Hood, False, Head, Tomb Prospector, False
+Top Hat, False, Head, Hunter B, False
+White Church Hat, False, Head, White Church, False
+Yamamura Hunter Hat, False, Head, Yamamura, False
+Yharnam Hunter Cap, False, Head, Yharnam Hunter, False
+Arianna's Shoes, False, Leg, NO_SET, True
+Ashen Hunter Trousers, False, Leg, Ashen Hunter, False
+Black Church Trousers/Dress, False, Leg, Black Church, False
+Bloodied Trousers, False, Leg, Brador, False
+Bone Ash Leggings, True, Leg, Bone Ash, False
+Butcher Trousers, False, Leg, Butcher, False
+Cainhurst Leggings, False, Leg, Cainhurst, False
+Charred Hunter Trousers, False, Leg, Charred, False
+Choir Trousers, False, Leg, Choir, False
+Constable Trousers, False, Leg, Constable, False
+Crowfeather Trousers, False, Leg, Crowfeather, False
+Decorative Old Hunter Trousers, False, Leg, Decorative Old Hunter, False
+Doll Skirt, False, Leg, Doll, True
+Executioner Trousers, False, Leg, Executioner, False
+Foreign Trousers, False, Leg, Foreign, False
+Gascoigne's Trousers, False, Leg, Gascoigne, False
+Gehrman's Hunter Trousers, False, Leg, Gehrman, False
+Graveguard Kilt, False, Leg, Graveguard, False
+Harrowed Trousers, False, Leg, Harrowed, False
+Henryk's Hunter Trousers, False, Leg, Henryk, False
+Hunter Trousers, False, Leg, Hunter A, False
+Hunter Trousers, False, Leg, Hunter B, False
+Knight's Trousers/Dress, False, Leg, Knight, False
+Madman Leggings, True, Leg, Madman, False
+Maria Hunter Trousers, False, Leg, Maria, False
+Student Trousers, False, Leg, NO_SET, True
+Tomb Prospector False, Leg, Trousers, Tomb Prospector, False
+Wine Hakama, False, Leg, Yamamura, False
+White Church Trousers/Dress, False, Leg, White Church, False
+Yahar'gul Black Trousers, False, Leg, Yahar'gul, False
+Yharnam Hunter Trousers, False, Leg, Yharnam Hunter, False

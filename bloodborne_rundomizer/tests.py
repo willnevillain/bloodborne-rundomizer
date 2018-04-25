@@ -8,29 +8,12 @@ class TestFilters(unittest.TestCase):
         self.armor = rundomizer.populate_armor()
         self.weapons = rundomizer.populate_weapons()
 
-    def test_remove_plus_armor(self):
-        filtered = rundomizer.remove_plus_items(self.armor)
-        for piece in filtered:
-            self.assertTrue(piece.location != 'NG+')
-        self.assertTrue(len(filtered) < len(self.armor))
-            
-    def test_remove_plus_weapons(self):
-        filtered = rundomizer.remove_plus_items(self.weapons)
-        for weapon in filtered:
-            self.assertTrue(weapon.location != 'NG+')
-        self.assertTrue(len(filtered) < len(self.weapons))            
-
-    def test_remove_chalice_armor(self):
-        filtered = rundomizer.remove_chalice_items(self.armor)
-        for piece in filtered:
-            self.assertTrue(piece.location != 'Chalice')
-        self.assertTrue(len(filtered) < len(self.armor))
-
-    def test_remove_chalice_weapons(self):
-        filtered = rundomizer.remove_chalice_items(self.weapons)
-        for weapon in filtered:
-            self.assertTrue(weapon.location != 'Chalice')
-        self.assertTrue(len(filtered) < len(self.weapons))
+    def test_remove_chalice_equipment(self):
+        filtered_lists = [rundomizer.remove_chalice_items(self.armor), rundomizer.remove_chalice_items(self.weapons)]
+        for filtered_list in filtered_lists:
+            for equipment in filtered_list:
+                self.assertTrue(equipment.chalice != 'True')
+        self.assertTrue((len(filtered_lists[0]) < len(self.armor)) and (len(filtered_lists[1]) < len(self.weapons)))
 
     def test_remove_big_guns(self):
         filtered = rundomizer.remove_big_guns(self.weapons)
