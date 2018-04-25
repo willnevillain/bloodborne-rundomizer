@@ -85,7 +85,7 @@ def remove_chalice_items(equipment):
 def remove_big_guns(weapons):
     new_weapons = []
     for piece in weapons:
-        if piece.weapon_type != 'Firearm' or piece.requirements['str'] < 27:
+        if piece.slot != 'Firearm' or piece.requirements['str'] < 27:
             new_weapons.append(piece)
     return new_weapons
 
