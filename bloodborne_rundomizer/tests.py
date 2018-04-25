@@ -22,6 +22,13 @@ class TestFilters(unittest.TestCase):
                 self.assertTrue(weapon.requirements['str'] < 27)
         self.assertTrue(len(filtered) < len(self.weapons))
     
+    def test_remove_torches(self):
+        torches = ['Torch', "Hunter's Torch"]
+        filtered = rundomizer.remove_torches(self.weapons)
+        for weapon in filtered:
+            self.assertTrue(weapon.name not in torches)
+        self.assertTrue(len(filtered) < len(self.weapons))
+
     def test_remove_fashionable_armor(self):
         filtered = rundomizer.remove_fashionable_items(self.armor)
         for piece in filtered:
