@@ -142,12 +142,7 @@ def choose_all_equipment(options):
 
 
 def main():
-    options = get_options()
-    all_equipment = choose_all_equipment(options)
-    for equipment in all_equipment:
-        print(equipment)
-    myDude = Hunter(all_equipment)
-    myDude.display_info
+    Hunter(choose_all_equipment(get_options())).display_info()
     
 
 if __name__ == '__main__':
