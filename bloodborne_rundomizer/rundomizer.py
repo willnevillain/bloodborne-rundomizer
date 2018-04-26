@@ -11,7 +11,8 @@ def get_options():
     parser.add_argument('-no_bigguns', action='store_true', help='Remove all firearms with a strength requirement of 27+ from item pool.')
     parser.add_argument('-no_chalice', action='store_true', help='Remove chalice dungeon items from item pool.')
     parser.add_argument('-no_fashion', action='store_true', help='Remove fashionable items from item pool. You fiend.')
-    parser.add_argument('-no_torches', action='store_true', help='Remove Torch and Hunters Torch from item pool')
+    parser.add_argument('-no_torches', action='store_true', help="Remove Torch and Hunter's Torch from item pool")
+    parser.add_argument('-no_shields', action='store_true', help='Remove Wooden Shield and Loch Shield from item pool')
     return parser.parse_args()
 
 
@@ -56,6 +57,8 @@ def filter_weapons(weapons, options):
         weapons = remove_big_guns(weapons)
     if options.no_torches:
         weapons = remove_torches(weapons)
+    if options.no_shields:
+        weapons = remove_shields(weapons)
     return weapons
 
 
@@ -87,6 +90,14 @@ def remove_torches(weapons):
     new_weapons = []
     for piece in weapons:
         if piece.name not in torches:
+            new_weapons.append(piece)
+    return new_weapons
+
+def remove_shields(weapons):
+    shields = ['Wooden Shield', 'Loch Shield']
+    new_weapons = []
+    for piece in weapons:
+        if piece.name not in shields:
             new_weapons.append(piece)
     return new_weapons
 
