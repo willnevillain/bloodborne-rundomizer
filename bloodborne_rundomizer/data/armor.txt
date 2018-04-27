@@ -1,4 +1,39 @@
 #name, chalice, armor_type, armor_set, fashionable
+Beak Mask, False, Head, Crowfeather, False
+Black Church Hat, False, Head, Black Church, False
+Black Hood, False, Head, Foreign, False
+Black Hooded Iron Helm, False, Head, Yahar'gul, False
+Blindfold Cap, False, Head, Choir, False
+Bone Ash Mask, True, Head, Bone Ash, False
+Brador's Testimony, False, Head, Brador, False
+Butcher Mask, False, Head, Butcher, False
+Cainhurst Helmet, False, Head, Cainhurst, False
+Crown of Illusions, False, Head, NO_SET, True
+Doll Hat, False, Head, Doll, True
+Enlarged Head, False, Head, NO_SET, True
+Gascoigne's Cap, False, Head, Gascoigne, False
+Gehrman's Hunter Cap, False, Head, Gehrman, False
+Gold Ardeo, False, Head, Executioner, False
+Graveguard Mask, False, Head, Graveguard, False
+Grey Wolf Cap, False, Head, Ashen Hunter, False
+Harrowed Hood, False, Head, Harrowed, False
+Henryk's Hunter Cap, False, Head, Henryk, False
+Hunter Hat, False, Head, Hunter A, False
+Iron Yahar'Gul Helm, False, Head, Yahar'gul, True
+Knight's Wig, False, Head, Knight, False
+Madman Hood, True, Head, Madman, False
+Maria Hunter Cap, False, Head, Maria, False
+Master's Iron Helm, False, Head, Constable, False
+Mensis Cage, False, Head, NO_SET, True
+Old Hunter Cap, False, Head, Old Hunter, False
+Old Hunter Top Hat, False, Head, Decorative Old Hunter, False
+One-Eyed Iron Helm, False, Head, Constable, True
+Rumpled Yharnam Hat, False, Head, NO_SET, True
+Tomb Prospector Hood, False, Head, Tomb Prospector, False
+Top Hat, False, Head, Hunter B, False
+White Church Hat, False, Head, White Church, False
+Yamamura Hunter Hat, False, Head, Yamamura, False
+Yharnam Hunter Cap, False, Head, Yharnam Hunter, False
 Ashen Hunter Garb, False, Chest, Ashen Hunter, False
 Beast Hide Garb, False, Chest, Brador, False
 Black Church Garb, False, Chest, Black Church, False
@@ -61,41 +96,6 @@ Surgical Long Gloves, False, Hand, White Church, False
 Tomb Prospector Gloves, False, Hand, Tomb Prospector, False
 Yahar'gul Black Gloves, False, Hand, Yahar'gul, False
 Yharnam Hunter Gloves, False, Hand, Yharnam Hunter, False
-Beak Mask, False, Head, Crowfeather, False
-Black Church Hat, False, Head, Black Church, False
-Black Hood, False, Head, Foreign, False
-Black Hooded Iron Helm, False, Head, Yahar'gul, False
-Blindfold Cap, False, Head, Choir, False
-Bone Ash Mask, True, Head, Bone Ash, False
-Brador's Testimony, False, Head, Brador, False
-Butcher Mask, False, Head, Butcher, False
-Cainhurst Helmet, False, Head, Cainhurst, False
-Crown of Illusions, False, Head, NO_SET, True
-Doll Hat, False, Head, Doll, True
-Enlarged Head, False, Head, NO_SET, True
-Gascoigne's Cap, False, Head, Gascoigne, False
-Gehrman's Hunter Cap, False, Head, Gehrman, False
-Gold Ardeo, False, Head, Executioner, False
-Graveguard Mask, False, Head, Graveguard, False
-Grey Wolf Cap, False, Head, Ashen Hunter, False
-Harrowed Hood, False, Head, Harrowed, False
-Henryk's Hunter Cap, False, Head, Henryk, False
-Hunter Hat, False, Head, Hunter A, False
-Iron Yahar'Gul Helm, False, Head, Yahar'gul, True
-Knight's Wig, False, Head, Knight, False
-Madman Hood, True, Head, Madman, False
-Maria Hunter Cap, False, Head, Maria, False
-Master's Iron Helm, False, Head, Constable, False
-Mensis Cage, False, Head, NO_SET, True
-Old Hunter Cap, False, Head, Old Hunter, False
-Old Hunter Top Hat, False, Head, Decorative Old Hunter, False
-One-Eyed Iron Helm, False, Head, Constable, True
-Rumpled Yharnam Hat, False, Head, NO_SET, True
-Tomb Prospector Hood, False, Head, Tomb Prospector, False
-Top Hat, False, Head, Hunter B, False
-White Church Hat, False, Head, White Church, False
-Yamamura Hunter Hat, False, Head, Yamamura, False
-Yharnam Hunter Cap, False, Head, Yharnam Hunter, False
 Arianna's Shoes, False, Leg, NO_SET, True
 Ashen Hunter Trousers, False, Leg, Ashen Hunter, False
 Black Church Trousers/Dress, False, Leg, Black Church, False
