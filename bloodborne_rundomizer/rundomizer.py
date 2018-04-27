@@ -11,6 +11,7 @@ def get_options():
     parser.add_argument('-no_bigguns', action='store_true', help='Remove all firearms with a strength requirement of 27+ from item pool.')
     parser.add_argument('-no_chalice', action='store_true', help='Remove chalice dungeon items from item pool.')
     parser.add_argument('-no_fashion', action='store_true', help='Remove fashionable items from item pool. You fiend.')
+    parser.add_argument('-fashion', action='store_true', help='Choose a random armor piece per slot across all armor sets.')
     parser.add_argument('-no_torches', action='store_true', help="Remove Torch and Hunter's Torch from item pool")
     parser.add_argument('-no_shields', action='store_true', help='Remove Wooden Shield and Loch Shield from item pool')
     return parser.parse_args()
@@ -43,6 +44,14 @@ def populate_armor():
                 fashionable = armor_details[4].strip()
                 armor.append(Armor(name, armor_type, chalice, armor_set, fashionable))
     return armor
+
+
+def populate_armor_sets(armor):
+    armor_sets = []
+    for piece in armor:
+        if (piece.armor_set not in armor_sets) and (piece.armor_set != 'NO_SET'):
+            armor_sets.append(piece.armor_set)
+    return armor_sets
 
 
 def filter_equipment(equipment, options):
@@ -124,6 +133,15 @@ def choose_equipment_for_slot(equipment, slot):
     return selected
 
 
+def choose_armor_set(armor):
+    chosen_set = take_random_from_list(populate_armor_sets(armor))
+    set_pieces = []
+    for piece in armor:
+        if piece.armor_set == chosen_set:
+            set_pieces.append(piece)
+    return set_pieces
+
+
 def choose_all_weapons(options):
     weapons = filter_weapons(populate_weapons(), options)
     if not weapons:
@@ -139,8 +157,11 @@ def choose_all_armor(options):
     if not armor:
         raise InvalidInventoryError('No suitable armor found - please verify inventory file and filters')
     chosen_armor = []
-    for slot in Armor.slots:
-        chosen_armor.append(choose_equipment_for_slot(armor, slot))
+    if options.fashion:
+        for slot in Armor.slots:
+            chosen_armor.append(choose_equipment_for_slot(armor, slot))
+    else:
+        chosen_armor = choose_armor_set(armor)
     return chosen_armor
 
 
