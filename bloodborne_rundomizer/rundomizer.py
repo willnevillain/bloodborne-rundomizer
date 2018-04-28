@@ -10,7 +10,9 @@ import argparse
 def get_options():
     parser = argparse.ArgumentParser(prog='bloodborne-rundomizer')
     parser.add_argument('-fashion', action='store_true', help='Choose a random armor piece per slot across all armor sets.')
-    parser.add_argument('-tools', action=ToolAction, type=int, default=0, help='Choose n hunter tools.')
+    parser.add_argument('-tools', action=ToolAction, type=int, default=0, help='Choose n random Hunter Tools.')
+    parser.add_argument('-runes', action=RuneAction, type=int, default=0, help='Choose n random Caryll Runes.')
+    parser.add_argument('-covenant', action='store_true', help='Choose a random covenant rune.')
     parser.add_argument('-no_bigguns', action='store_true', help='Remove all firearms with a strength requirement of 27+ from item pool.')
     parser.add_argument('-no_chalice', action='store_true', help='Remove chalice dungeon items from item pool.')
     parser.add_argument('-no_torches', action='store_true', help="Remove Torch and Hunter's Torch from item pool")
@@ -56,6 +58,18 @@ def populate_tools():
                 requirements = dict([('blt', int(tool_details[1].strip())), ('arc', int(tool_details[2].strip()))])
                 tools.append(Tool(name, requirements))
     return tools
+
+
+def populate_runes():
+    runes = []
+    with open('data/runes.txt') as f:
+        for row in f:
+            if row[0] != '#':
+                rune_details = row.split(',')
+                name = rune_details[0].strip()
+                covenant = rune_details[1].strip()
+                runes.append(Rune(name, covenant))
+    return runes
 
 
 def populate_armor_sets(armor):
@@ -145,20 +159,6 @@ def choose_armor_set(armor):
     return set_pieces
 
 
-def choose_tools(options):
-    tools = populate_tools()
-    chosen_tools = []
-    for i in range(0, options.tools):
-        chosen = False
-        tool = None
-        while not chosen:
-            tool = take_random_from_list(tools)
-            if tool not in chosen_tools:
-                chosen = True
-        chosen_tools.append(tool)
-    return chosen_tools
-
-
 def choose_weapons(options):
     weapons = filter_weapons(populate_weapons(), options)
     if not weapons:
@@ -191,10 +191,49 @@ def choose_equipment(options):
     return equipment
 
 
+def choose_tools(options):
+    tools = populate_tools()
+    chosen_tools = []
+    for i in range(0, options.tools):
+        chosen = False
+        tool = None
+        while not chosen:
+            tool = take_random_from_list(tools)
+            if tool not in chosen_tools:
+                chosen = True
+        chosen_tools.append(tool)
+    return chosen_tools
+
+
+def choose_runes(options):
+    runes = populate_runes()
+    chosen_runes = []
+    if options.runes:
+        for i in range(0, options.runes):
+            chosen = False
+            rune = None
+            while not chosen:
+                rune = take_random_from_list(runes)
+                if (rune not in chosen_runes) and (rune.covenant == 'False'):
+                    chosen = True
+            chosen_runes.append(rune)
+    if options.covenant:
+        chosen = False
+        rune = None
+        while not chosen:
+            rune = take_random_from_list(runes)
+            if (rune not in chosen_runes) and (rune.covenant == 'True'):
+                chosen = True
+        chosen_runes.append(rune)
+    return chosen_runes
+
+
 def choose_items(options):
     items = []
     for tool in choose_tools(options):
         items.append(tool)
+    for rune in choose_runes(options):
+        items.append(rune)
     return items
 
 

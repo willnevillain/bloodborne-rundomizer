@@ -9,6 +9,11 @@ class Tool(Item):
         Item.__init__(self, name)
         self.requirements = requirements
 
+class Rune(Item):
+    def __init__(self, name, covenant):
+        Item.__init__(self, name)
+        self.covenant = covenant
+
 class Equipment(Item):
     def __init__(self, name, slot, chalice):
         Item.__init__(self, name)

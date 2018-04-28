@@ -1,0 +1,28 @@
+#name, convenant
+Anti-Clockwise Metamorphosis, False
+Arcane Lake, False
+Beast, False
+Beast's Embrace, True
+Blood Rapture, False
+Clawmark, False
+Clear Deep Sea, False
+Clockwise Metamorphosis, False
+Communion, False
+Corruption, True
+Deep Sea, False
+Dissipating Lake, False
+Eye, False
+Fading Lake, False
+Formless Oedon, False
+Great Deep Sea, False
+Great Lake, False
+Guidance, False
+Heir, False
+Hunter, True
+Impurity, True
+Lake, False
+Milkweed, True
+Moon, False
+Oedon Writhe, False
+Radiance, True
+Stunning Deep Sea, False
