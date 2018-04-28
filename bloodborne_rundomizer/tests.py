@@ -36,12 +36,6 @@ class TestFilters(unittest.TestCase):
             self.assertTrue(weapon.name not in shields)
         self.assertTrue(len(filtered) < len(self.weapons))
 
-    def test_remove_fashionable_armor(self):
-        filtered = rundomizer.remove_fashionable_items(self.armor)
-        for piece in filtered:
-            self.assertTrue(piece.fashionable == 'False')
-        self.assertTrue(len(filtered) < len(self.armor))
-
 
 if __name__ == '__main__':
     unittest.main()
