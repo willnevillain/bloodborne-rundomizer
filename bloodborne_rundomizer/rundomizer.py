@@ -8,10 +8,9 @@ import argparse
 
 def get_options():
     parser = argparse.ArgumentParser(prog='bloodborne-rundomizer')
+    parser.add_argument('-fashion', action='store_true', help='Choose a random armor piece per slot across all armor sets.')
     parser.add_argument('-no_bigguns', action='store_true', help='Remove all firearms with a strength requirement of 27+ from item pool.')
     parser.add_argument('-no_chalice', action='store_true', help='Remove chalice dungeon items from item pool.')
-    parser.add_argument('-no_fashion', action='store_true', help='Remove fashionable items from item pool. You fiend.')
-    parser.add_argument('-fashion', action='store_true', help='Choose a random armor piece per slot across all armor sets.')
     parser.add_argument('-no_torches', action='store_true', help="Remove Torch and Hunter's Torch from item pool")
     parser.add_argument('-no_shields', action='store_true', help='Remove Wooden Shield and Loch Shield from item pool')
     return parser.parse_args()
@@ -41,8 +40,7 @@ def populate_armor():
                 chalice = armor_details[1].strip()
                 armor_type = armor_details[2].strip()
                 armor_set = armor_details[3].strip()
-                fashionable = armor_details[4].strip()
-                armor.append(Armor(name, armor_type, chalice, armor_set, fashionable))
+                armor.append(Armor(name, armor_type, chalice, armor_set))
     return armor
 
 
@@ -73,8 +71,6 @@ def filter_weapons(weapons, options):
 
 def filter_armor(armor, options):
     armor = filter_equipment(armor, options)
-    if options.no_fashion:
-        armor = remove_fashionable_items(armor)
     return armor
 
 
@@ -109,14 +105,6 @@ def remove_shields(weapons):
         if piece.name not in shields:
             new_weapons.append(piece)
     return new_weapons
-
-
-def remove_fashionable_items(armor):
-    new_armor = []
-    for piece in armor:
-        if piece.fashionable != 'True':
-            new_armor.append(piece)
-    return new_armor
 
 
 def take_random_from_list(items):

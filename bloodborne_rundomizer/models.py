@@ -12,10 +12,9 @@ class Equipment(Item):
 
 class Armor(Equipment):
     slots = ['Head', 'Chest', 'Hand', 'Leg']
-    def __init__(self, name, slot, chalice, armor_set, fashionable):
+    def __init__(self, name, slot, chalice, armor_set):
         Equipment.__init__(self, name, slot, chalice)
         self.armor_set = armor_set
-        self.fashionable = fashionable
 
 class Weapon(Equipment):
     slots = ['Trick', 'Firearm']
