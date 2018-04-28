@@ -9,6 +9,7 @@ import argparse
 def get_options():
     parser = argparse.ArgumentParser(prog='bloodborne-rundomizer')
     parser.add_argument('-fashion', action='store_true', help='Choose a random armor piece per slot across all armor sets.')
+    parser.add_argument('-tools', type=int, help='Choose n hunter tools.')
     parser.add_argument('-no_bigguns', action='store_true', help='Remove all firearms with a strength requirement of 27+ from item pool.')
     parser.add_argument('-no_chalice', action='store_true', help='Remove chalice dungeon items from item pool.')
     parser.add_argument('-no_torches', action='store_true', help="Remove Torch and Hunter's Torch from item pool")
@@ -42,6 +43,15 @@ def populate_armor():
                 armor_set = armor_details[3].strip()
                 armor.append(Armor(name, armor_type, chalice, armor_set))
     return armor
+
+def populate_tools():
+    tools = []
+    with open('data/tools.txt') as f:
+        for row in f:
+            if row[0] != '#':
+                tool_details = row.split(',')
+                name = tool_details[0].strip()
+                requirements = dict([('blt', int(tool_details[1].strip())), ('arc', int(tool_details[2].strip()))])
 
 
 def populate_armor_sets(armor):

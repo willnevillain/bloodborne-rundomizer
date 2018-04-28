@@ -1,0 +1,13 @@
+#name, blt_req, arc_req
+Accursed Brew, 0, 30
+Beast Roar, 0, 15
+Blacksky Eye, 0, 16
+Empty Phantasm Shell, 0, 15
+Executioner's Gloves, 0, 20
+Old Hunter Bone, 0, 15
+Tiny Tonitrus, 0, 25
+Choir Bell, 0, 15
+Augur of Ebrietas, 0, 18
+Madaras Whistle, 18, 0
+Messenger's Gift, 0, 10
+A Call Beyond, 0, 40
