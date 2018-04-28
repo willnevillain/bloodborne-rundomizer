@@ -1,4 +1,5 @@
 from models import *
+from actions import *
 from hunter import Hunter
 from errors import InvalidInventoryError
 import random
@@ -9,7 +10,7 @@ import argparse
 def get_options():
     parser = argparse.ArgumentParser(prog='bloodborne-rundomizer')
     parser.add_argument('-fashion', action='store_true', help='Choose a random armor piece per slot across all armor sets.')
-    parser.add_argument('-tools', type=int, help='Choose n hunter tools.')
+    parser.add_argument('-tools', action=ToolAction, type=int, default=0, help='Choose n hunter tools.')
     parser.add_argument('-no_bigguns', action='store_true', help='Remove all firearms with a strength requirement of 27+ from item pool.')
     parser.add_argument('-no_chalice', action='store_true', help='Remove chalice dungeon items from item pool.')
     parser.add_argument('-no_torches', action='store_true', help="Remove Torch and Hunter's Torch from item pool")
@@ -44,6 +45,7 @@ def populate_armor():
                 armor.append(Armor(name, armor_type, chalice, armor_set))
     return armor
 
+
 def populate_tools():
     tools = []
     with open('data/tools.txt') as f:
@@ -52,6 +54,8 @@ def populate_tools():
                 tool_details = row.split(',')
                 name = tool_details[0].strip()
                 requirements = dict([('blt', int(tool_details[1].strip())), ('arc', int(tool_details[2].strip()))])
+                tools.append(Tool(name, requirements))
+    return tools
 
 
 def populate_armor_sets(armor):
@@ -108,6 +112,7 @@ def remove_torches(weapons):
             new_weapons.append(piece)
     return new_weapons
 
+
 def remove_shields(weapons):
     shields = ['Wooden Shield', 'Loch Shield']
     new_weapons = []
@@ -140,7 +145,21 @@ def choose_armor_set(armor):
     return set_pieces
 
 
-def choose_all_weapons(options):
+def choose_tools(options):
+    tools = populate_tools()
+    chosen_tools = []
+    for i in range(0, options.tools):
+        chosen = False
+        tool = None
+        while not chosen:
+            tool = take_random_from_list(tools)
+            if tool not in chosen_tools:
+                chosen = True
+        chosen_tools.append(tool)
+    return chosen_tools
+
+
+def choose_weapons(options):
     weapons = filter_weapons(populate_weapons(), options)
     if not weapons:
         raise InvalidInventoryError('No suitable weapons found - please verify inventory file and filters')
@@ -150,7 +169,7 @@ def choose_all_weapons(options):
     return chosen_weapons
 
 
-def choose_all_armor(options):
+def choose_armor(options):
     armor = filter_armor(populate_armor(), options)
     if not armor:
         raise InvalidInventoryError('No suitable armor found - please verify inventory file and filters')
@@ -161,19 +180,27 @@ def choose_all_armor(options):
     else:
         chosen_armor = choose_armor_set(armor)
     return chosen_armor
+    
 
-
-def choose_all_equipment(options):
+def choose_equipment(options):
     equipment = []
-    for weapon in choose_all_weapons(options):
+    for weapon in choose_weapons(options):
         equipment.append(weapon)
-    for armor in choose_all_armor(options):
+    for armor in choose_armor(options):
         equipment.append(armor)
     return equipment
 
 
+def choose_items(options):
+    items = []
+    for tool in choose_tools(options):
+        items.append(tool)
+    return items
+
+
 def main():
-    Hunter(choose_all_equipment(get_options())).display_info()
+    options = get_options()
+    Hunter(choose_equipment(options), choose_items(options)).display_info()
     
 
 if __name__ == '__main__':

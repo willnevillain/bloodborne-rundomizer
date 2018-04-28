@@ -1,14 +1,19 @@
 class Item(object):
     def __init__(self, name):
         self.name = name
+    def __repr__(self):
+        return self.name
+
+class Tool(Item):
+    def __init__(self, name, requirements):
+        Item.__init__(self, name)
+        self.requirements = requirements
 
 class Equipment(Item):
     def __init__(self, name, slot, chalice):
         Item.__init__(self, name)
         self.slot = slot
         self.chalice = chalice
-    def __str__(self):
-        return self.name
 
 class Armor(Equipment):
     slots = ['Head', 'Chest', 'Hand', 'Leg']
